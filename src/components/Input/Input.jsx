@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Search } from 'react-feather';
 import {
   InputContainer,
   Icon,
   Background,
   InputStyled,
 } from '../../assets/styles/components/input';
-import { Search } from 'react-feather';
 
 const Input = ({ type, placeholder }) => {
   return (

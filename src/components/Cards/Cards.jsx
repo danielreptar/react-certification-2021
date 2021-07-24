@@ -8,7 +8,7 @@ const Cards = ({ data }) => {
   return (
     <CardsContainer>
       {data.length
-        ? videos.map((item) => <Card key={item.id.videoId} item={item}></Card>)
+        ? videos.map((item) => <Card key={item.id.videoId} item={item} />)
         : null}
     </CardsContainer>
   );
