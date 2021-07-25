@@ -5,6 +5,7 @@ import { CardsContainer } from '../../assets/styles/components/cards';
 
 const Cards = ({ data }) => {
   const videos = data.filter((video) => video.id.kind.includes('#video'));
+
   return (
     <CardsContainer>
       {data.length

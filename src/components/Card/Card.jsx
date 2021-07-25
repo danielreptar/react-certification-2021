@@ -24,7 +24,12 @@ const Card = ({ item }) => {
 };
 
 Card.propTypes = {
-  item: PropTypes.objectOf(PropTypes.object).isRequired,
+  item: PropTypes.shape({
+    kind: PropTypes.string,
+    etag: PropTypes.string,
+    id: PropTypes.object,
+    snippet: PropTypes.object,
+  }).isRequired,
 };
 
 export default Card;
