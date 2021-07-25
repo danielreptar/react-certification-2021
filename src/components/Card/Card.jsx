@@ -27,8 +27,8 @@ Card.propTypes = {
   item: PropTypes.shape({
     kind: PropTypes.string,
     etag: PropTypes.string,
-    id: PropTypes.object,
-    snippet: PropTypes.object,
+    id: PropTypes.objectOf(PropTypes.string),
+    snippet: PropTypes.objectOf(PropTypes.any),
   }).isRequired,
 };
 

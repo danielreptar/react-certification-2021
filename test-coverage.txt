@@ -1,0 +1,43 @@
+---------------------------|----------|----------|----------|----------|-------------------|
+File                       |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+---------------------------|----------|----------|----------|----------|-------------------|
+All files                  |    81.03 |      100 |       70 |     80.7 |                   |
+ assets/styles             |       90 |      100 |      100 |       90 |                   |
+  breakPoints.js           |      100 |      100 |      100 |      100 |                   |
+  colors.js                |      100 |      100 |      100 |      100 |                   |
+  globalStyles.js          |        0 |      100 |      100 |        0 |                20 |
+ assets/styles/components  |    76.19 |      100 |      100 |    76.19 |                   |
+  card.js                  |      100 |      100 |      100 |      100 |                   |
+  cards.js                 |      100 |      100 |      100 |      100 |                   |
+  horizontalMenu.js        |      100 |      100 |      100 |      100 |                   |
+  input.js                 |      100 |      100 |      100 |      100 |                   |
+  layout.js                |        0 |      100 |      100 |        0 |                 4 |
+  sidebar.js               |        0 |      100 |      100 |        0 |        5,29,32,44 |
+ assets/styles/views       |      100 |      100 |      100 |      100 |                   |
+  home.js                  |      100 |      100 |      100 |      100 |                   |
+ components/App            |        0 |      100 |        0 |        0 |                   |
+  App.jsx                  |        0 |      100 |        0 |        0 |               8,9 |
+  index.js                 |        0 |        0 |        0 |        0 |                   |
+ components/Card           |      100 |      100 |      100 |      100 |                   |
+  Card.jsx                 |      100 |      100 |      100 |      100 |                   |
+  index.js                 |        0 |        0 |        0 |        0 |                   |
+ components/Cards          |      100 |      100 |      100 |      100 |                   |
+  Cards.jsx                |      100 |      100 |      100 |      100 |                   |
+  index.js                 |        0 |        0 |        0 |        0 |                   |
+ components/HorizontalMenu |      100 |      100 |      100 |      100 |                   |
+  HorizontalMenu.jsx       |      100 |      100 |      100 |      100 |                   |
+  index.js                 |        0 |        0 |        0 |        0 |                   |
+ components/Input          |      100 |      100 |      100 |      100 |                   |
+  Input.jsx                |      100 |      100 |      100 |      100 |                   |
+ components/Layout         |        0 |      100 |        0 |        0 |                   |
+  Layout.component.jsx     |        0 |      100 |        0 |        0 |                 9 |
+  index.js                 |        0 |        0 |        0 |        0 |                   |
+ components/Sidebar        |        0 |      100 |        0 |        0 |                   |
+  Sidebar.jsx              |        0 |      100 |        0 |        0 |             10,11 |
+  index.js                 |        0 |        0 |        0 |        0 |                   |
+ mock                      |      100 |      100 |      100 |      100 |                   |
+  data.js                  |      100 |      100 |      100 |      100 |                   |
+ pages/Home                |      100 |      100 |      100 |      100 |                   |
+  HomePage.jsx             |      100 |      100 |      100 |      100 |                   |
+  index.js                 |        0 |        0 |        0 |        0 |                   |
+---------------------------|----------|----------|----------|----------|-------------------|
