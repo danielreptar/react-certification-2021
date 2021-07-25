@@ -17,7 +17,7 @@ const HorizontalMenu = () => {
   return (
     <MenuContainer>
       <div>
-        <Input type="text" placeholder={'Search...'} />
+        <Input type="text" placeholder="Search..." />
       </div>
       <OptionsContainer>
         <Sun />
