@@ -8,6 +8,7 @@ export const CardContainer = styled.div`
   box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
   margin: 1.2rem;
   display: inline-block;
+  cursor: pointer;
 `;
 export const CardTitle = styled.h4`
   margin: 0;

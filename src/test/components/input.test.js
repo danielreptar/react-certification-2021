@@ -8,9 +8,9 @@ describe('Input', () => {
     const typeInput = 'text';
     const placeholder = 'placeholder test';
     render(<Input type={typeInput} placeholder={placeholder} />);
-    const inputElement = screen.getByPlaceholderText('placeholder test');
+    const inputElement = screen.getByPlaceholderText(placeholder);
 
-    expect(inputElement.placeholder).toEqual('placeholder test');
-    expect(inputElement.type).toEqual('text');
+    expect(inputElement.placeholder).toEqual(placeholder);
+    expect(inputElement.type).toEqual(typeInput);
   });
 });

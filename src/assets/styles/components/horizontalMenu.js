@@ -24,7 +24,6 @@ export const OptionsContainer = styled.div`
   }
 `;
 export const DropdownWrapper = styled.div`
-  /* display: inline; */
   position: relative;
 `;
 

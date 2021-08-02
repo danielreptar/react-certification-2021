@@ -13,11 +13,17 @@ import {
 } from '../../assets/styles/components/horizontalMenu';
 import Input from '../Input/Input';
 
-const HorizontalMenu = () => {
+const HorizontalMenu = ({ handleSearch, handleKeyPress, search }) => {
   return (
     <MenuContainer>
       <div>
-        <Input type="text" placeholder={'Search...'} />
+        <Input
+          handleKeyPress={handleKeyPress}
+          handleSearch={handleSearch}
+          search={search}
+          type="text"
+          placeholder={'Search...'}
+        />
       </div>
       <OptionsContainer>
         <Sun />
