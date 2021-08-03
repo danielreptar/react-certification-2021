@@ -1,15 +1,15 @@
 import React from 'react';
 import { render, screen, cleanup } from '@testing-library/react';
 
-import Cards from '../../components/Cards';
+import RelatedVideosList from '../../components/RelatedVideosList';
 import data from '../../mock/data';
 
 const testData = data.items;
 afterEach(cleanup);
 
-describe('Cards', () => {
+describe('RelatedVideosList', () => {
   it('renders a list of elements', () => {
-    render(<Cards data={testData} />);
+    render(<RelatedVideosList relatedVideos={testData} />);
     const videoElements = screen.queryAllByRole('heading');
     const videoNames = videoElements.map((video) => video.textContent);
     const dataNames = testData
@@ -18,8 +18,8 @@ describe('Cards', () => {
     expect(videoNames).toEqual(dataNames);
   });
   it('no renders when the array is empty', () => {
-    render(<Cards />);
-    const cardList = screen.queryByRole('list');
-    expect(cardList).not.toBeInTheDocument();
+    render(<RelatedVideosList />);
+    const itemsList = screen.queryAllByRole('listitem');
+    expect(itemsList.length).toBe(0);
   });
 });

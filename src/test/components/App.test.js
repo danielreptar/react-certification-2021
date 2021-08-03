@@ -1,14 +1,13 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import HomePage from '../../pages/Home';
-import data from '../../mock/data';
+import App from '../../components/App';
 
 beforeEach(() => {
-  render(<HomePage videos={data} />);
+  render(<App />);
 });
 
-describe('HomeView', () => {
+describe('App', () => {
   it('contains a title', () => {
     const titleElement = screen.queryByText('Welcome to the Challenge!');
 

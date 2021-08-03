@@ -8,10 +8,16 @@ import {
   InputStyled,
 } from '../../assets/styles/components/input';
 
-const Input = ({ type, placeholder }) => {
+const Input = ({ search, type, placeholder, handleKeyPress, handleSearch }) => {
   return (
     <InputContainer>
-      <InputStyled placeholder={placeholder} type={type} />
+      <InputStyled
+        value={search}
+        onKeyDown={handleKeyPress}
+        onChange={handleSearch}
+        placeholder={placeholder}
+        type={type}
+      />
       <Icon>
         <Search width={16} />
       </Icon>
@@ -21,12 +27,18 @@ const Input = ({ type, placeholder }) => {
 };
 
 Input.propTypes = {
+  search: PropTypes.string,
   type: PropTypes.string,
   placeholder: PropTypes.string,
+  handleSearch: PropTypes.func,
+  handleKeyPress: PropTypes.func,
 };
 Input.defaultProps = {
+  search: '',
   type: 'text',
   placeholder: '',
+  handleSearch: () => {},
+  handleKeyPress: () => {},
 };
 
 export default Input;

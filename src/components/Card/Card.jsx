@@ -8,12 +8,12 @@ import {
   CardText,
 } from '../../assets/styles/components/card';
 
-const Card = ({ item }) => {
+const Card = ({ item, handleSelectVideo }) => {
   const {
     snippet: { title, description, thumbnails },
   } = item;
   return (
-    <CardContainer>
+    <CardContainer onClick={() => handleSelectVideo(item)}>
       <CardImage src={thumbnails.medium.url} />
       <CardBody>
         <CardTitle>{title}</CardTitle>
@@ -30,6 +30,10 @@ Card.propTypes = {
     id: PropTypes.objectOf(PropTypes.string),
     snippet: PropTypes.objectOf(PropTypes.any),
   }).isRequired,
+  handleSelectVideo: PropTypes.func,
+};
+Card.defaultProps = {
+  handleSelectVideo: () => {},
 };
 
 export default Card;

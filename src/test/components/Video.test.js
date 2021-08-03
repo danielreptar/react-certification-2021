@@ -1,9 +1,13 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-import Card from '../../components/Card';
+import Video from '../../components/Video';
 
 const testItem = {
+  id: {
+    kind: 'youtube#video',
+    videoId: 'nmXMgqjQzls',
+  },
   snippet: {
     title: 'Video Test',
     description: 'Video test text',
@@ -28,19 +32,15 @@ const testItem = {
 };
 
 beforeEach(() => {
-  render(<Card item={testItem} />);
+  render(<Video video={testItem} />);
 });
 
-describe('Card', () => {
+describe('Video', () => {
   it('renders title, text and image', () => {
     const titleElement = screen.getByText('Video Test');
     const textElement = screen.getByText('Video test text');
-    const imageElement = screen.getByRole('img', {
-      src: 'https://i.ytimg.com/vi/nmXMgqjQzls/mqdefault.jpg',
-    });
 
     expect(titleElement).toBeInTheDocument();
     expect(textElement).toBeInTheDocument();
-    expect(imageElement).toBeInTheDocument();
   });
 });
