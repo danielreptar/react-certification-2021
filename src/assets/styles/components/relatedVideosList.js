@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { deviceMF } from '../breakPoints';
-import { grey } from '../colors';
 
 export const ListContainer = styled.div`
   width: 100%;
@@ -40,7 +39,7 @@ export const ListItemTitle = styled.h4`
   line-height: 1rem;
 `;
 export const ListItemSeparator = styled.hr`
-  border: 2px solid ${grey};
+  border: 2px solid ${(props) => props.theme.grey};
   border-radius: 1px;
   width: 100%;
   opacity: 0.7;

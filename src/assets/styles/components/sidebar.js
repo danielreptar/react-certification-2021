@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { deviceMF } from '../breakPoints';
-import { black, darkPink, lightPink } from '../colors';
 
 export const SidebarContainer = styled.ul`
   position: fixed;
@@ -11,11 +10,12 @@ export const SidebarContainer = styled.ul`
   height: 100%;
   width: 60px;
   list-style-type: none;
-  background: ${lightPink};
+  background: ${(props) => props.theme.lightPink};
   overflow: hidden;
   transition: width 0.5s;
-  box-shadow: 0 4px 24px 0 rgb(34, 41, 47, 10%);
+  box-shadow: 0 4px 24px 0 ${(props) => props.theme.boxShadow};
   display: none;
+  transition: all 0.25s ease;
 
   &:hover {
     width: 300px;
@@ -33,12 +33,12 @@ export const SidebarLink = styled.div`
   display: flex;
   font-size: 1rem;
   text-decoration: none;
-  color: ${black};
+  color: ${(props) => props.theme.black};
   height: 60px;
   align-items: center;
   cursor: pointer;
   &:hover {
-    background-color: ${darkPink};
+    background-color: ${(props) => props.theme.darkPink};
   }
 `;
 export const SidebarIcon = styled.div`

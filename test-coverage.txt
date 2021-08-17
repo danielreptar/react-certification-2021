@@ -1,11 +1,11 @@
 ------------------------------|----------|----------|----------|----------|-------------------|
 File                          |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
 ------------------------------|----------|----------|----------|----------|-------------------|
-All files                     |    92.97 |    68.75 |    72.73 |     92.8 |                   |
+All files                     |    86.98 |    45.83 |    77.33 |    86.91 |                   |
  assets/styles                |      100 |      100 |      100 |      100 |                   |
   breakPoints.js              |      100 |      100 |      100 |      100 |                   |
-  colors.js                   |      100 |      100 |      100 |      100 |                   |
   globalStyles.js             |      100 |      100 |      100 |      100 |                   |
+  theme.js                    |      100 |      100 |      100 |      100 |                   |
  assets/styles/components     |      100 |      100 |      100 |      100 |                   |
   card.js                     |      100 |      100 |      100 |      100 |                   |
   cards.js                    |      100 |      100 |      100 |      100 |                   |
@@ -19,24 +19,24 @@ All files                     |    92.97 |    68.75 |    72.73 |     92.8 |     
   details.js                  |      100 |      100 |      100 |      100 |                   |
   home.js                     |      100 |      100 |      100 |      100 |                   |
  components/App               |    57.14 |       25 |       25 |    57.14 |                   |
-  App.jsx                     |    57.14 |       25 |       25 |    57.14 | 20,21,24,25,26,30 |
+  App.jsx                     |    57.14 |       25 |       25 |    57.14 | 22,23,26,27,28,32 |
   index.js                    |        0 |        0 |        0 |        0 |                   |
  components/Card              |    83.33 |      100 |    33.33 |    83.33 |                   |
   Card.jsx                    |    83.33 |      100 |    33.33 |    83.33 |                16 |
   index.js                    |        0 |        0 |        0 |        0 |                   |
- components/Cards             |      100 |       50 |      100 |      100 |                   |
-  Cards.jsx                   |      100 |       50 |      100 |      100 |                 7 |
+ components/Cards             |      100 |      100 |    66.67 |      100 |                   |
+  Cards.jsx                   |      100 |      100 |    66.67 |      100 |                   |
   index.js                    |        0 |        0 |        0 |        0 |                   |
- components/HorizontalMenu    |      100 |      100 |      100 |      100 |                   |
-  HorizontalMenu.jsx          |      100 |      100 |      100 |      100 |                   |
+ components/HorizontalMenu    |    57.14 |       25 |       50 |    57.14 |                   |
+  HorizontalMenu.jsx          |    57.14 |       25 |       50 |    57.14 |          22,23,25 |
   index.js                    |        0 |        0 |        0 |        0 |                   |
  components/Input             |      100 |      100 |    33.33 |      100 |                   |
   Input.jsx                   |      100 |      100 |    33.33 |      100 |                   |
  components/Layout            |      100 |      100 |      100 |      100 |                   |
   Layout.component.jsx        |      100 |      100 |      100 |      100 |                   |
   index.js                    |        0 |        0 |        0 |        0 |                   |
- components/RelatedVideosList |    90.91 |      100 |    66.67 |       90 |                   |
-  RelatedVideosList.jsx       |    90.91 |      100 |    66.67 |       90 |                19 |
+ components/RelatedVideosList |       90 |      100 |       60 |       90 |                   |
+  RelatedVideosList.jsx       |       90 |      100 |       60 |       90 |                20 |
   index.js                    |        0 |        0 |        0 |        0 |                   |
  components/Sidebar           |      100 |      100 |      100 |      100 |                   |
   Sidebar.jsx                 |      100 |      100 |      100 |      100 |                   |
@@ -52,9 +52,13 @@ All files                     |    92.97 |    68.75 |    72.73 |     92.8 |     
  pages/Home                   |      100 |      100 |      100 |      100 |                   |
   HomePage.jsx                |      100 |      100 |      100 |      100 |                   |
   index.js                    |        0 |        0 |        0 |        0 |                   |
+ providers/GlobalProvider     |    64.86 |    14.29 |       50 |    64.86 |                   |
+  GlobalProvider.jsx          |    76.47 |       50 |    28.57 |    76.47 |       17,28,34,40 |
+  duck.js                     |       55 |        0 |       80 |       55 |... 62,63,68,70,76 |
+  index.js                    |        0 |        0 |        0 |        0 |                   |
  utils/hooks                  |    95.83 |    88.89 |      100 |    95.65 |                   |
   useVideoSizing.js           |      100 |      100 |      100 |      100 |                   |
-  useYoutubeVideos.js         |     87.5 |        0 |      100 |     87.5 |                15 |
+  useYoutubeVideos.js         |     87.5 |        0 |      100 |     87.5 |                18 |
  utils/services               |      100 |      100 |      100 |      100 |                   |
   service.js                  |      100 |      100 |      100 |      100 |                   |
 ------------------------------|----------|----------|----------|----------|-------------------|

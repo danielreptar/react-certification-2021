@@ -1,14 +1,15 @@
 import styled from 'styled-components';
-import { black, darkgrey } from '../colors';
 
 export const CardContainer = styled.div`
   background-color: white;
   border-radius: 0.425rem;
   width: 350px;
-  box-shadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+  box-shadow: 0 4px 24px 0 ${(props) => props.theme.boxShadow};
   margin: 1.2rem;
   display: inline-block;
   cursor: pointer;
+  background-color: ${(props) => props.theme.white};
+  transition: all 0.25s ease;
 `;
 export const CardTitle = styled.h4`
   margin: 0;
@@ -16,7 +17,7 @@ export const CardTitle = styled.h4`
   line-height: 1.2rem;
   word-wrap: break-word;
   font-size: 1.2rem;
-  color: ${black};
+  color: ${(props) => props.theme.dark};
   font-family: 'Roboto', sans-serif;
 `;
 export const CardBody = styled.div`
@@ -37,6 +38,6 @@ export const CardText = styled.div`
   text-align: justify;
   font-size: 14px;
   line-height: 1.45;
-  color: ${darkgrey};
+  color: ${(props) => props.theme.darkgrey};
   word-wrap: break-word;
 `;

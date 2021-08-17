@@ -1,4 +1,6 @@
 import React from 'react';
+import { Scrollbars } from 'react-custom-scrollbars';
+import PropTypes from 'prop-types';
 import {
   ListContainer,
   List,
@@ -8,8 +10,7 @@ import {
   ListItemSeparator,
   ListItemTitle,
 } from '../../assets/styles/components/relatedVideosList';
-import { Scrollbars } from 'react-custom-scrollbars';
-import PropTypes from 'prop-types';
+import { useGlobalContext } from '../../providers/GlobalProvider/GlobalProvider';
 
 const RelatedVideo = ({ video, handleSelectVideo }) => {
   const {
@@ -26,8 +27,8 @@ const RelatedVideo = ({ video, handleSelectVideo }) => {
   );
 };
 
-const RelatedVideosList = ({ relatedVideos, handleSelectVideo }) => {
-  const videos = relatedVideos.filter((video) => video.id.kind.includes('#video'));
+const RelatedVideosList = ({ handleSelectVideo }) => {
+  const { videos } = useGlobalContext();
 
   return (
     <ListContainer>
@@ -47,11 +48,9 @@ const RelatedVideosList = ({ relatedVideos, handleSelectVideo }) => {
 };
 
 RelatedVideosList.propTypes = {
-  relatedVideos: PropTypes.arrayOf(PropTypes.object),
   handleSelectVideo: PropTypes.func,
 };
 RelatedVideosList.defaultProps = {
-  relatedVideos: [],
   handleSelectVideo: () => {},
 };
 
