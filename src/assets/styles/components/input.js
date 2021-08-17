@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 import { deviceMF } from '../breakPoints';
-import { black, white, grey } from '../colors';
 
 export const InputContainer = styled.div`
-  background: ${grey};
+  background: ${(props) => props.theme.grey};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,6 +10,7 @@ export const InputContainer = styled.div`
   border-radius: 12px;
   position: relative;
   width: 240px;
+  transition: all 0.25s ease;
   @media ${deviceMF.mobileL} {
     width: 280px;
   }
@@ -22,6 +22,7 @@ export const InputStyled = styled.input`
   font-size: 0.9rem;
   font-family: 'Cocogoose Pro Light', sans-serif;
   margin-left: 8px;
+  color: ${(props) => props.theme.black};
   width: 200px;
   transition: all 0.25s ease;
   &:focus {
@@ -34,7 +35,7 @@ export const InputStyled = styled.input`
 `;
 export const Icon = styled.div`
   order: -1;
-  background: ${white};
+  background: ${(props) => props.theme.white};
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -46,7 +47,7 @@ export const Icon = styled.div`
 
   ${InputStyled}:focus ~ & {
     transform: translate(0, -8px);
-    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 8px 20px 0px ${(props) => props.theme.boxShadow};
   }
 `;
 export const Background = styled.div`
@@ -64,6 +65,6 @@ export const Background = styled.div`
   transition: all 0.25s ease;
 
   ${InputStyled}:focus ~ & {
-    border: 2px solid ${black};
+    border: 2px solid ${(props) => props.theme.black};
   }
 `;

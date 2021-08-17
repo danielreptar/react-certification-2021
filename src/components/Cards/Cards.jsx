@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Card from '../Card/Card';
 import { CardsContainer } from '../../assets/styles/components/cards';
+import { useGlobalContext } from '../../providers/GlobalProvider/GlobalProvider';
 
-const Cards = ({ data, handleSelectVideo }) => {
-  const videos = data ? data.filter((video) => video.id.kind.includes('#video')) : [];
+const Cards = ({ handleSelectVideo }) => {
+  const { videos } = useGlobalContext();
 
   return (
     <CardsContainer>
@@ -16,11 +17,9 @@ const Cards = ({ data, handleSelectVideo }) => {
 };
 
 Cards.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.object),
   handleSelectVideo: PropTypes.func,
 };
 Cards.defaultProps = {
-  data: [],
   handleSelectVideo: () => {},
 };
 

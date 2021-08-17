@@ -1,11 +1,11 @@
 import React from 'react';
+import ReactPlayer from 'react-player';
 import {
   VideoContainer,
   VideoInfoContainer,
   VideoTitle,
   VideoText,
 } from '../../assets/styles/components/video';
-import ReactPlayer from 'react-player';
 import { useVideoSizing } from '../../utils/hooks/useVideoSizing';
 
 const Video = ({ video }) => {

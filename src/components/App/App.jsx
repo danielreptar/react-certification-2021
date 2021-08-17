@@ -6,19 +6,21 @@ import { useYoutubeVideos } from '../../utils/hooks/useYoutubeVideos';
 // views
 import Home from '../../pages/Home/HomePage';
 import DetailsPage from '../../pages/Details';
+import { useGlobalContext } from '../../providers/GlobalProvider/GlobalProvider';
+import { ThemeProvider } from 'styled-components';
 
 const App = () => {
-  const [search, setSearch] = useState('');
   const [page, setPage] = useState({
     home: true,
     video: null,
   });
-  const { videos, getNewVideos } = useYoutubeVideos(search);
+  const { search, theme, changeSearchCall } = useGlobalContext();
+  const { getNewVideos } = useYoutubeVideos(search);
 
   // handlers
   const handleSearch = (event) => {
     const { value } = event.target;
-    setSearch(value);
+    changeSearchCall(value);
   };
   const handleKeyPress = (event) => {
     if (event.keyCode === 13) {
@@ -35,18 +37,20 @@ const App = () => {
 
   return (
     <>
-      <GlobalStyle />
-      <Layout handleSearch={handleSearch} handleKeyPress={handleKeyPress} search={search}>
-        {page.home ? (
-          <Home handleSelectVideo={handleSelectVideo} videos={videos} />
-        ) : (
-          <DetailsPage
-            video={page.video}
-            handleSelectVideo={handleSelectVideo}
-            relatedVideos={videos.items}
-          />
-        )}
-      </Layout>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Layout
+          handleSearch={handleSearch}
+          handleKeyPress={handleKeyPress}
+          search={search}
+        >
+          {page.home ? (
+            <Home handleSelectVideo={handleSelectVideo} />
+          ) : (
+            <DetailsPage video={page.video} handleSelectVideo={handleSelectVideo} />
+          )}
+        </Layout>
+      </ThemeProvider>
     </>
   );
 };

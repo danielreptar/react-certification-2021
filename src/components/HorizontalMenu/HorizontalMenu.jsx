@@ -1,7 +1,7 @@
 import React from 'react';
 
 // icons
-import { Sun, User } from 'react-feather';
+import { Sun, Moon, User } from 'react-feather';
 
 import {
   ButtonDropdown,
@@ -11,9 +11,21 @@ import {
   MenuContainer,
   OptionsContainer,
 } from '../../assets/styles/components/horizontalMenu';
+import { theme } from '../../assets/styles/theme';
+import { useGlobalContext } from '../../providers/GlobalProvider/GlobalProvider';
 import Input from '../Input/Input';
 
 const HorizontalMenu = ({ handleSearch, handleKeyPress, search }) => {
+  const { theme: actualTheme, changeThemeCall } = useGlobalContext();
+
+  const handleTheme = () => {
+    if (actualTheme.theme === 'light') {
+      changeThemeCall(theme.darkTheme);
+    } else {
+      changeThemeCall(theme.lightTheme);
+    }
+  };
+
   return (
     <MenuContainer>
       <div>
@@ -22,12 +34,14 @@ const HorizontalMenu = ({ handleSearch, handleKeyPress, search }) => {
           handleSearch={handleSearch}
           search={search}
           type="text"
-          placeholder={'Search...'}
+          placeholder="Search..."
         />
       </div>
       <OptionsContainer>
-        <Sun />
-
+        {/*  eslint-disable-next-line  */}
+        <div role="button" onClick={handleTheme}>
+          {actualTheme.theme === 'light' ? <Sun /> : <Moon />}
+        </div>
         <DropdownWrapper>
           <ButtonDropdown>
             <User />

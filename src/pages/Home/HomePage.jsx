@@ -2,12 +2,11 @@ import React from 'react';
 import { HomeTitle } from '../../assets/styles/views/home';
 import Cards from '../../components/Cards/Cards';
 
-const HomePage = ({ videos, handleSelectVideo }) => {
-  const { items = [] } = videos;
+const HomePage = ({ handleSelectVideo }) => {
   return (
     <section>
       <HomeTitle>Welcome to the Challenge!</HomeTitle>
-      <Cards handleSelectVideo={handleSelectVideo} data={items} />
+      <Cards handleSelectVideo={handleSelectVideo} />
     </section>
   );
 };

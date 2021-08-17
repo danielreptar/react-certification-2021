@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import { black, white } from './colors';
 
 import CocogooseProLightEot from '../fonts/CocogoosePro-Light.eot';
 import CocogooseProLightSvg from '../fonts/CocogoosePro-Light.svg';
@@ -58,7 +57,7 @@ export const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-family: 'Cocogoose Pro light',Sans-Serif;
-    background-color: ${black};
+    background-color: ${(props) => props.theme.black};
     scroll-behavior: smooth;
   }
 
@@ -88,10 +87,11 @@ export const GlobalStyle = createGlobalStyle`
   body {
    
     margin: 0 auto;
-    background-color: ${white};
-    color: ${black};
+    background-color: ${(props) => props.theme.white};
+    color: ${(props) => props.theme.black};
     overscroll-behavior: none;
     width: 100%;
+    transition: all 0.25s ease;
   }
 
   body {
