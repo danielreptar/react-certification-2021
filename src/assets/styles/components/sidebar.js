@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { deviceMF } from '../breakPoints';
 
@@ -16,7 +17,7 @@ export const SidebarContainer = styled.ul`
   box-shadow: 0 4px 24px 0 ${(props) => props.theme.boxShadow};
   display: none;
   transition: all 0.25s ease;
-
+  z-index: 1;
   &:hover {
     width: 300px;
   }
@@ -29,7 +30,7 @@ export const SidebarContainer = styled.ul`
 export const SidebarItem = styled.li`
   width: 300px;
 `;
-export const SidebarLink = styled.div`
+export const SidebarLink = styled(Link)`
   display: flex;
   font-size: 1rem;
   text-decoration: none;

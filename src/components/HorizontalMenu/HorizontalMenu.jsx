@@ -1,7 +1,7 @@
 import React from 'react';
 
 // icons
-import { Sun, Moon, User } from 'react-feather';
+import { Sun, Moon, User, Search } from 'react-feather';
 
 import {
   ButtonDropdown,
@@ -16,7 +16,13 @@ import { useGlobalContext } from '../../providers/GlobalProvider/GlobalProvider'
 import Input from '../Input/Input';
 
 const HorizontalMenu = ({ handleSearch, handleKeyPress, search }) => {
-  const { theme: actualTheme, changeThemeCall } = useGlobalContext();
+  const {
+    theme: actualTheme,
+    changeThemeCall,
+    toggleModalCall,
+    logoutCall,
+    login,
+  } = useGlobalContext();
 
   const handleTheme = () => {
     if (actualTheme.theme === 'light') {
@@ -35,7 +41,9 @@ const HorizontalMenu = ({ handleSearch, handleKeyPress, search }) => {
           search={search}
           type="text"
           placeholder="Search..."
-        />
+        >
+          <Search width={16} />
+        </Input>
       </div>
       <OptionsContainer>
         {/*  eslint-disable-next-line  */}
@@ -47,7 +55,11 @@ const HorizontalMenu = ({ handleSearch, handleKeyPress, search }) => {
             <User />
           </ButtonDropdown>
           <Dropdown>
-            <DropdownItem>Login</DropdownItem>
+            {!login.user ? (
+              <DropdownItem onClick={toggleModalCall}>Login</DropdownItem>
+            ) : (
+              <DropdownItem onClick={logoutCall}>Logout</DropdownItem>
+            )}
           </Dropdown>
         </DropdownWrapper>
       </OptionsContainer>

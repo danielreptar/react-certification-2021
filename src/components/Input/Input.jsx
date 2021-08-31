@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Search } from 'react-feather';
+
 import {
   InputContainer,
   Icon,
@@ -8,19 +8,17 @@ import {
   InputStyled,
 } from '../../assets/styles/components/input';
 
-const Input = ({ search, type, placeholder, handleKeyPress, handleSearch }) => {
+const Input = ({ search, type, placeholder, handleKeyPress, handleSearch, children }) => {
   return (
     <InputContainer>
       <InputStyled
         value={search}
         onKeyDown={handleKeyPress}
-        onChange={handleSearch}
+        onChange={(event) => handleSearch(event.target.value)}
         placeholder={placeholder}
         type={type}
       />
-      <Icon>
-        <Search width={16} />
-      </Icon>
+      <Icon>{children}</Icon>
       <Background />
     </InputContainer>
   );

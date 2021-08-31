@@ -16,12 +16,19 @@ export const VideoInfoContainer = styled.div`
     padding: 1.2rem 0;
   }
 `;
+export const VideoTitleContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+`;
 export const VideoTitle = styled.h2`
   margin-bottom: 1.4rem;
   font-size: 18px;
   @media ${deviceMF.mobileL} {
     font-size: 24px;
     padding: 0;
+    margin: 0;
   }
 `;
 export const VideoText = styled.p`

@@ -7,24 +7,24 @@ import RelatedVideosList from '../../components/RelatedVideosList';
 import { useParams } from 'react-router';
 import { useGlobalContext } from '../../providers/GlobalProvider/GlobalProvider';
 
-const DetailsPage = () => {
+const DetailsFavorite = () => {
   const { id } = useParams();
-  const { videos } = useGlobalContext();
+  const { favorites } = useGlobalContext();
 
   const getVideo = useCallback(
     (videoId) => {
-      return videos.find((video) => video.id.videoId === videoId);
+      return favorites.find((video) => video.id.videoId === videoId);
     },
-    [videos]
+    [favorites]
   );
   const pageVideo = useMemo(() => getVideo(id), [id, getVideo]);
 
   return (
     <VideoSection>
       {pageVideo && <Video video={pageVideo} />}
-      <RelatedVideosList itemPath="/video/" relatedVideos={videos} />
+      <RelatedVideosList itemPath="/video/favorites/" relatedVideos={favorites} />
     </VideoSection>
   );
 };
 
-export default DetailsPage;
+export default DetailsFavorite;
