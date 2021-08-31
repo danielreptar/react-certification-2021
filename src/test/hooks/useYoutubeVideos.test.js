@@ -20,7 +20,6 @@ describe('useYoutubeVideos', () => {
     mock.onGet(url).reply(200, data);
 
     const { result } = renderHook(() => useYoutubeVideos());
-    console.log(result.current);
 
     expect(result.current).toBeTruthy();
   });

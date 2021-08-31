@@ -4,6 +4,7 @@ import { render, screen } from '@testing-library/react';
 import Card from '../../components/Card';
 
 const testItem = {
+  id: { videoId: 'testId' },
   snippet: {
     title: 'Video Test',
     description: 'Video test text',

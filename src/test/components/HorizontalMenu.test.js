@@ -5,10 +5,16 @@ import HorizontalMenu from '../../components/HorizontalMenu';
 import GlobalProvider from '../../providers/GlobalProvider/GlobalProvider';
 import { theme } from '../../assets/styles/theme';
 
+const user = {
+  user: null,
+  error: true,
+  message: '',
+};
+
 describe('HorizontalMenu', () => {
   it('renders an input', () => {
     render(
-      <GlobalProvider value={{ search: '', theme: theme.lightTheme }}>
+      <GlobalProvider value={{ search: '', theme: theme.lightTheme, login: user }}>
         <HorizontalMenu />
       </GlobalProvider>
     );
@@ -20,7 +26,7 @@ describe('HorizontalMenu', () => {
   });
   it('renders an input with a value', () => {
     render(
-      <GlobalProvider value={{ theme: theme.lightTheme }}>
+      <GlobalProvider value={{ theme: theme.lightTheme, login: user }}>
         <HorizontalMenu search="test" />
       </GlobalProvider>
     );

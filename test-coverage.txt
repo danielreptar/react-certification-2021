@@ -1,64 +1,85 @@
 ------------------------------|----------|----------|----------|----------|-------------------|
 File                          |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
 ------------------------------|----------|----------|----------|----------|-------------------|
-All files                     |    86.98 |    45.83 |    77.33 |    86.91 |                   |
+All files                     |    76.54 |     37.7 |    72.09 |    76.33 |                   |
  assets/styles                |      100 |      100 |      100 |      100 |                   |
   breakPoints.js              |      100 |      100 |      100 |      100 |                   |
   globalStyles.js             |      100 |      100 |      100 |      100 |                   |
   theme.js                    |      100 |      100 |      100 |      100 |                   |
  assets/styles/components     |      100 |      100 |      100 |      100 |                   |
+  button.js                   |      100 |      100 |      100 |      100 |                   |
   card.js                     |      100 |      100 |      100 |      100 |                   |
   cards.js                    |      100 |      100 |      100 |      100 |                   |
   horizontalMenu.js           |      100 |      100 |      100 |      100 |                   |
   input.js                    |      100 |      100 |      100 |      100 |                   |
   layout.js                   |      100 |      100 |      100 |      100 |                   |
+  loginform.js                |      100 |      100 |      100 |      100 |                   |
+  modal.js                    |      100 |      100 |      100 |      100 |                   |
   relatedVideosList.js        |      100 |      100 |      100 |      100 |                   |
   sidebar.js                  |      100 |      100 |      100 |      100 |                   |
   video.js                    |      100 |      100 |      100 |      100 |                   |
  assets/styles/views          |      100 |      100 |      100 |      100 |                   |
   details.js                  |      100 |      100 |      100 |      100 |                   |
   home.js                     |      100 |      100 |      100 |      100 |                   |
- components/App               |    57.14 |       25 |       25 |    57.14 |                   |
-  App.jsx                     |    57.14 |       25 |       25 |    57.14 | 22,23,26,27,28,32 |
+ components/App               |       80 |        0 |    66.67 |       80 |                   |
+  App.jsx                     |       80 |        0 |    66.67 |       80 |          30,33,34 |
   index.js                    |        0 |        0 |        0 |        0 |                   |
- components/Card              |    83.33 |      100 |    33.33 |    83.33 |                   |
-  Card.jsx                    |    83.33 |      100 |    33.33 |    83.33 |                16 |
+ components/Button            |      100 |      100 |      100 |      100 |                   |
+  Button.jsx                  |      100 |      100 |      100 |      100 |                   |
   index.js                    |        0 |        0 |        0 |        0 |                   |
- components/Cards             |      100 |      100 |    66.67 |      100 |                   |
-  Cards.jsx                   |      100 |      100 |    66.67 |      100 |                   |
+ components/Card              |       70 |      100 |    33.33 |       70 |                   |
+  Card.jsx                    |       70 |      100 |    33.33 |       70 |          20,21,24 |
   index.js                    |        0 |        0 |        0 |        0 |                   |
- components/HorizontalMenu    |    57.14 |       25 |       50 |    57.14 |                   |
-  HorizontalMenu.jsx          |    57.14 |       25 |       50 |    57.14 |          22,23,25 |
+ components/Cards             |      100 |      100 |      100 |      100 |                   |
+  Cards.jsx                   |      100 |      100 |      100 |      100 |                   |
   index.js                    |        0 |        0 |        0 |        0 |                   |
- components/Input             |      100 |      100 |    33.33 |      100 |                   |
-  Input.jsx                   |      100 |      100 |    33.33 |      100 |                   |
+ components/HorizontalMenu    |    57.14 |    33.33 |       50 |    57.14 |                   |
+  HorizontalMenu.jsx          |    57.14 |    33.33 |       50 |    57.14 |          28,29,31 |
+  index.js                    |        0 |        0 |        0 |        0 |                   |
+ components/Input             |       80 |      100 |       25 |       80 |                   |
+  Input.jsx                   |       80 |      100 |       25 |       80 |                17 |
  components/Layout            |      100 |      100 |      100 |      100 |                   |
   Layout.component.jsx        |      100 |      100 |      100 |      100 |                   |
   index.js                    |        0 |        0 |        0 |        0 |                   |
- components/RelatedVideosList |       90 |      100 |       60 |       90 |                   |
-  RelatedVideosList.jsx       |       90 |      100 |       60 |       90 |                20 |
+ components/LoginForm         |       50 |      100 |       50 |       50 |                   |
+  LoginForm.jsx               |       50 |      100 |       50 |       50 | 21,22,23,24,25,27 |
   index.js                    |        0 |        0 |        0 |        0 |                   |
- components/Sidebar           |      100 |      100 |      100 |      100 |                   |
-  Sidebar.jsx                 |      100 |      100 |      100 |      100 |                   |
+ components/Modal             |      100 |       75 |       50 |      100 |                   |
+  Modal.jsx                   |      100 |       75 |       50 |      100 |                10 |
   index.js                    |        0 |        0 |        0 |        0 |                   |
- components/Video             |      100 |      100 |      100 |      100 |                   |
-  Video.jsx                   |      100 |      100 |      100 |      100 |                   |
+ components/ProtectedRoute    |       40 |        0 |       50 |       40 |                   |
+  ProtectedRoute.jsx          |       40 |        0 |       50 |       40 |           9,10,12 |
+ components/RelatedVideosList |    76.92 |      100 |       60 |    76.92 |                   |
+  RelatedVideosList.jsx       |    76.92 |      100 |       60 |    76.92 |          23,24,27 |
+  index.js                    |        0 |        0 |        0 |        0 |                   |
+ components/Sidebar           |      100 |       50 |      100 |      100 |                   |
+  Sidebar.jsx                 |      100 |       50 |      100 |      100 |                24 |
+  index.js                    |        0 |        0 |        0 |        0 |                   |
+ components/Video             |    66.67 |       25 |       25 |    66.67 |                   |
+  Video.jsx                   |    66.67 |       25 |       25 |    66.67 |          29,30,34 |
   index.js                    |        0 |        0 |        0 |        0 |                   |
  mock                         |      100 |      100 |      100 |      100 |                   |
   data.js                     |      100 |      100 |      100 |      100 |                   |
  pages/Details                |      100 |      100 |      100 |      100 |                   |
   DetailsPage.jsx             |      100 |      100 |      100 |      100 |                   |
   index.js                    |        0 |        0 |        0 |        0 |                   |
+ pages/DetailsFavorite        |      100 |      100 |      100 |      100 |                   |
+  DetailsFavorite.jsx         |      100 |      100 |      100 |      100 |                   |
+  index.js                    |        0 |        0 |        0 |        0 |                   |
+ pages/Favorites              |      100 |      100 |      100 |      100 |                   |
+  Favorites.jsx               |      100 |      100 |      100 |      100 |                   |
+  index.js                    |        0 |        0 |        0 |        0 |                   |
  pages/Home                   |      100 |      100 |      100 |      100 |                   |
   HomePage.jsx                |      100 |      100 |      100 |      100 |                   |
   index.js                    |        0 |        0 |        0 |        0 |                   |
- providers/GlobalProvider     |    64.86 |    14.29 |       50 |    64.86 |                   |
-  GlobalProvider.jsx          |    76.47 |       50 |    28.57 |    76.47 |       17,28,34,40 |
-  duck.js                     |       55 |        0 |       80 |       55 |... 62,63,68,70,76 |
+ providers/GlobalProvider     |    49.48 |     4.76 |    45.16 |    49.48 |                   |
+  GlobalProvider.jsx          |    63.64 |       50 |     12.5 |    63.64 |... 72,75,78,81,84 |
+  duck.js                     |    42.19 |        0 |       80 |    42.19 |... 98,207,208,218 |
   index.js                    |        0 |        0 |        0 |        0 |                   |
  utils/hooks                  |    95.83 |    88.89 |      100 |    95.65 |                   |
   useVideoSizing.js           |      100 |      100 |      100 |      100 |                   |
   useYoutubeVideos.js         |     87.5 |        0 |      100 |     87.5 |                18 |
- utils/services               |      100 |      100 |      100 |      100 |                   |
+ utils/services               |    44.44 |        0 |       25 |    44.44 |                   |
+  login.api.js                |    16.67 |        0 |        0 |    16.67 |     9,10,11,12,14 |
   service.js                  |      100 |      100 |      100 |      100 |                   |
 ------------------------------|----------|----------|----------|----------|-------------------|

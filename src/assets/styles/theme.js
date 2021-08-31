@@ -8,6 +8,9 @@ export const theme = {
     lightPink: '#F3BFDB',
     darkPink: '#DBADC6',
     boxShadow: 'rgb(34, 41, 47 , 10%)',
+    blur: 'rgba(0, 0, 0, 0.5)',
+    success: '#4DFA8D',
+    cancel: '#DEDFE3',
   },
   darkTheme: {
     theme: 'dark',
@@ -18,5 +21,8 @@ export const theme = {
     lightPink: '#D979C4',
     darkPink: '#DBADC6',
     boxShadow: 'rgb(10, 10, 10 , 40%)',
+    blur: 'rgba(219, 173, 198, 0.5)',
+    success: '#44DB7B',
+    cancel: '#121212',
   },
 };

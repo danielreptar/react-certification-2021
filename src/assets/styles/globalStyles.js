@@ -57,8 +57,9 @@ export const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-family: 'Cocogoose Pro light',Sans-Serif;
-    background-color: ${(props) => props.theme.black};
+    background-color: ${(props) => props.theme.white};
     scroll-behavior: smooth;
+    transition: all 0.25s ease;
   }
 
   *, *:before, *:after {

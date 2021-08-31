@@ -3,7 +3,6 @@ import { render, screen, cleanup } from '@testing-library/react';
 
 import RelatedVideosList from '../../components/RelatedVideosList';
 import data from '../../mock/data';
-import GlobalProvider from '../../providers/GlobalProvider/GlobalProvider';
 
 const testData = data.items;
 
@@ -11,11 +10,7 @@ afterEach(cleanup);
 
 describe('RelatedVideosList', () => {
   it('renders a list of elements', () => {
-    render(
-      <GlobalProvider value={{ videos: testData }}>
-        <RelatedVideosList />
-      </GlobalProvider>
-    );
+    render(<RelatedVideosList relatedVideos={testData} />);
     const videoElements = screen.queryAllByRole('heading');
     const videoNames = videoElements.map((video) => video.textContent);
 
@@ -26,11 +21,7 @@ describe('RelatedVideosList', () => {
     expect(videoNames).toEqual(dataNames);
   });
   it('no renders when the array is empty', () => {
-    render(
-      <GlobalProvider value={{ videos: [] }}>
-        <RelatedVideosList />
-      </GlobalProvider>
-    );
+    render(<RelatedVideosList />);
     const itemsList = screen.queryAllByRole('listitem');
     expect(itemsList.length).toBe(0);
   });

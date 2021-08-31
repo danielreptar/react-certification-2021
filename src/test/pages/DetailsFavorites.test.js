@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter, Route } from 'react-router-dom';
 
-import DetailsPage from '../../pages/Details';
+import DetailsFavoritePage from '../../pages/DetailsFavorite';
 import data from '../../mock/data';
 import GlobalProvider from '../../providers/GlobalProvider/GlobalProvider';
 
@@ -14,18 +14,18 @@ const user = {
   message: '',
 };
 
-describe('DetailsPage', () => {
+describe('DetailsFavoritesPage', () => {
   it('contains a video info', () => {
     render(
       <GlobalProvider
         value={{
-          videos: items,
+          favorites: items,
           login: user,
         }}
       >
-        <MemoryRouter initialEntries={[`video/${testId}`]}>
-          <Route path="video/:id">
-            <DetailsPage />
+        <MemoryRouter initialEntries={[`video/favorites/${testId}`]}>
+          <Route path="video/favorites/:id">
+            <DetailsFavoritePage />
           </Route>
         </MemoryRouter>
       </GlobalProvider>

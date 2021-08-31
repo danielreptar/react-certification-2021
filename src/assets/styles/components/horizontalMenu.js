@@ -87,7 +87,7 @@ export const DropdownItem = styled.li`
   position: relative;
   background: ${(props) => props.theme.white};
   font-size: 1rem;
-  padding: ${(props) => props.theme.black};
+  padding: 0.3rem 0;
   color: ${(props) => props.theme.black};
   &:hover {
     background: ${(props) => props.theme.grey};

@@ -10,14 +10,21 @@ import {
   ListItemSeparator,
   ListItemTitle,
 } from '../../assets/styles/components/relatedVideosList';
-import { useGlobalContext } from '../../providers/GlobalProvider/GlobalProvider';
+import { useHistory } from 'react-router';
 
-const RelatedVideo = ({ video, handleSelectVideo }) => {
+const RelatedVideo = ({ video, itemPath }) => {
+  const history = useHistory();
   const {
+    id: { videoId },
     snippet: { title, thumbnails },
   } = video;
+
+  const handleSelectVideo = (id) => {
+    const videoPath = `${itemPath}${id}`;
+    history.push(videoPath);
+  };
   return (
-    <ListItem onClick={() => handleSelectVideo(video)}>
+    <ListItem onClick={() => handleSelectVideo(videoId)}>
       <ListItemInfo>
         <ListImage src={thumbnails.medium.url} />
         <ListItemTitle>{title}</ListItemTitle>
@@ -27,19 +34,13 @@ const RelatedVideo = ({ video, handleSelectVideo }) => {
   );
 };
 
-const RelatedVideosList = ({ handleSelectVideo }) => {
-  const { videos } = useGlobalContext();
-
+const RelatedVideosList = ({ relatedVideos, itemPath }) => {
   return (
     <ListContainer>
       <Scrollbars style={{ width: '100%', height: '100%' }}>
         <List>
-          {videos.map((video) => (
-            <RelatedVideo
-              key={video.id.videoId}
-              video={video}
-              handleSelectVideo={handleSelectVideo}
-            />
+          {relatedVideos.map((video) => (
+            <RelatedVideo itemPath={itemPath} key={video.id.videoId} video={video} />
           ))}
         </List>
       </Scrollbars>
@@ -48,10 +49,12 @@ const RelatedVideosList = ({ handleSelectVideo }) => {
 };
 
 RelatedVideosList.propTypes = {
-  handleSelectVideo: PropTypes.func,
+  relatedVideos: PropTypes.arrayOf(PropTypes.object),
+  itemPath: PropTypes.string,
 };
 RelatedVideosList.defaultProps = {
-  handleSelectVideo: () => {},
+  relatedVideos: [],
+  itemPath: '/',
 };
 
 export default RelatedVideosList;

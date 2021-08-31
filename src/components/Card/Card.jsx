@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { string } from 'prop-types';
 import {
   CardContainer,
   CardBody,
@@ -7,13 +7,21 @@ import {
   CardTitle,
   CardText,
 } from '../../assets/styles/components/card';
+import { useHistory } from 'react-router';
 
-const Card = ({ item, handleSelectVideo }) => {
+const Card = ({ item, itemPath }) => {
+  const history = useHistory();
   const {
+    id: { videoId },
     snippet: { title, description, thumbnails },
   } = item;
+
+  const handleSelectVideo = (id) => {
+    const videoPath = `${itemPath}${id}`;
+    history.push(videoPath);
+  };
   return (
-    <CardContainer onClick={() => handleSelectVideo(item)}>
+    <CardContainer onClick={() => handleSelectVideo(videoId)}>
       <CardImage src={thumbnails.medium.url} />
       <CardBody>
         <CardTitle>{title}</CardTitle>
@@ -30,10 +38,10 @@ Card.propTypes = {
     id: PropTypes.objectOf(PropTypes.string),
     snippet: PropTypes.objectOf(PropTypes.any),
   }).isRequired,
-  handleSelectVideo: PropTypes.func,
+  itemPath: string,
 };
 Card.defaultProps = {
-  handleSelectVideo: () => {},
+  itemPath: '/',
 };
 
 export default Card;
